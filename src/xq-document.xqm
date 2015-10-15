@@ -13,7 +13,7 @@ declare namespace xqdoc = 'http://www.xqdoc.org/1.0';
  : @param Function to retrieve the signature for
  : @return Function's signature
  :)
-declare function xqdoc:function-signature($function as element(xqdoc:function)) as xs:string {
+declare function xqdoc-boot:function-signature($function as element(xqdoc:function)) as xs:string {
  let $name := $function/xqdoc:name/text()
  return 
   <sig>{$name}({
